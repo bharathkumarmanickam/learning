@@ -29,7 +29,15 @@ class queue{
         System.out.println("Successfully inserted !!");
     }
     private static void deque(){
-
+        if(front == null){
+            System.out.println("empty");
+            rear = null;
+            return;
+        }else{
+            System.out.println("Element removed is : "+front.data);
+            front = front.next;
+        }        
+        
     }
     private static void print(){
         node current = front;
